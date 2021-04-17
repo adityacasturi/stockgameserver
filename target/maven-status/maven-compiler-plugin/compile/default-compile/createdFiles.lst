@@ -1,0 +1,8 @@
+com\function\stockmarketgame\Register.class
+com\function\stockmarketgame\GameInfo.class
+com\function\stockmarketgame\Signin.class
+com\function\stockmarketgame\Position.class
+com\function\stockmarketgame\Game.class
+com\function\stockmarketgame\User.class
+com\function\GetGamesForUser.class
+com\function\stockmarketgame\UserPortfolio.class

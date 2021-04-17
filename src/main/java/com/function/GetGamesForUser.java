@@ -61,13 +61,15 @@ public class GetGamesForUser {
         String query = "SELECT * FROM UserGamePortfolios u WHERE u.userId = '" + userId + "'";
         CosmosPagedIterable<UserPortfolio> userPortfolios = portfolioContainer.queryItems(query, queryOptions, UserPortfolio.class);
 
+        // test change
+        
         List<GameInfo> gameInfos = new ArrayList<>();
         while (userPortfolios.iterator().hasNext()) {
             UserPortfolio portfolio = userPortfolios.iterator().next();
 
             String gameId = portfolio.getGameId();
             String query1 = "SELECT * FROM games g WHERE g.gameId = '" + gameId + "'";
-            CosmosPagedIterable<Game> games = gameContainer.queryItems(query1, queryOptions, Game.class);
+            CosmosPagedIterable<Game> games = gameContainer.queryItems(query1, que ryOptions, Game.class);
             String gameName = games.iterator().next().getName();
 
             GameInfo info = new GameInfo();
